@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+ <main>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+          </div>
+          <div class="navContent">
+          <nav class="menu">
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fas fa-home"></i> <!-- Home icon -->
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-chart-line"></i> <!-- Analytics icon -->
+                  Analytics
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-comments"></i> <!-- Engage icon -->
+                  Engage
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-chart-pie"></i> <!-- Demand Wise icon -->
+                  Demand Wise
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-headset"></i> <!-- Support icon -->
+                  Support
+                </a>
+              </li>
+            </ul>
+          </nav>
+      
+          <!-- Footer Menu Items -->
+          <div class="footer">
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fas fa-bell"></i> <!-- What's New icon -->
+                  What's New
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-cog"></i> <!-- Settings icon -->
+                  Settings
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+    <div class="sideContent">
+        <div class="navbar">
+            <div class="left-section">
+                <i class="fas fa-handshake"></i> <!-- Demand Wise Icon -->
+                <div class="text-content">
+                  <div class="title">Demand Wise</div>
+                  <div class="subtitle">Opportunity</div>
+                </div>
+              </div>
+          
+              <div class="right-section">
+                <div class="search-box">
+                  <i class="fas fa-search"></i>
+                  <input type="text" placeholder="Find anything">
+                  <span class="shortcut">⌘ + /</span>
+                </div>
+          
+                <div class="date-range">
+                  <span>12 Jul 24 - 22 Jul 24</span>
+                  <i class="fas fa-calendar-alt"></i>
+                </div>
+              </div>
+        </div>
+        <div class="contentBody">
+            <div class="section1">
+      <div class="Focus">
+        <div class="header">
+            <span>Priority Focus</span>
+            <a href="#">See All</a>
+          </div>
+          <div class="content">
+            <div class="content-items">
+            <div class="focus-item">
+              <div class="items"><i class="fas fa-list"></i> Today's Todo</div>
+              <div class="number">7</div>
+            </div>
+            <div class="divider"></div>
+            <div class="focus-item">
+                <div class="items"> <i class="fas fa-calendar-day"></i> Today's Closure Date</div>
+              <div class="number">3</div>
+            </div>
+            <div class="divider"></div>
+            <div class="focus-item">
+                <div class="items"><i class="fas fa-magic"></i> Ai Suggested</div>
+              <div class="number">4</div>
+            </div>
+        </div>
+            <div class="curve"></div> 
+          </div>
+          <!-- Curve design at bottom-right -->
+      </div>
+      <div class="Goals">
+        <div class="header">
+            <span>Goals Achievements</span>
+            <a href="#">See All Goals</a>
+          </div>
+          <div class="content">
+            <div class="achievement">
+              <div class="chart-container" >
+                <canvas id="myChart3"></canvas>
+            </div>
+            </div>
+            <div class="goals-stats">
+                <div class="items">
+              <div class="stats-item">
+                <div class="number">15</div>
+                <span>Active Goals</span>
+              </div>
+              <div class="stats-item">
+                <div class="number">11</div>
+                <span>Completed Goals</span>
+              </div>
+            </div>
+              <p class="note">*Date filter doesn't apply to this data</p>
+            </div>
+           
+          </div>
+      </div>
+
+            </div>
+            <div class="section2">
+                <div class="tabs">
+                <div class="tab">
+                    <span>Sent</span>
+                    <span>500k</span>
+                </div>
+                <div class="tab">
+                    <span>Sent</span>
+                    <span>500k</span>
+                </div>
+            <div class="tab">
+                <span>Sent</span>
+                    <span>500k</span>
+            </div>
+            
+            <div class="tab">
+                <span>Sent</span>
+                    <span>500k</span>
+            </div>
+            <div class="tab">
+                <span>Sent</span>
+                    <span>500k</span>
+            </div>
+        </div>
+            </div>
+            <div class="section3">
+                <div class="trendGraph">
+                  <div class="head">
+                    <div class="right-box">
+                      <div class="box"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                      <p>Performance Trend</p>
+                    </div>
+                    <div class="left-box"></div>
+                  </div>
+                  <div class="trendChart">
+                    <canvas id="myChart" ></canvas>
+                  </div>
+                  
+                </div>
+            </div>
+            <div class="section4">
+              <div class="salesGraph">
+                  <!-- Header and Dropdown that stays visible -->
+                  <div class="right-box">
+                    <div class="boxes">
+                      <div class="box"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                      <p>Performance Trend</p>
+                    </div>
+                     
+                      <div class="left-box">
+                        <div class="search-box">
+                          <i class="fas fa-search" ></i>
+                          <input type="text" placeholder="Find anything">
+                          <span class="shortcut">⌘ + /</span>
+                        </div>
+                      <div class="boxi" style="background-color: white;border: 1px rgb(124, 122, 122) solid;"><i class="fa-solid fa-download" ></i></div>
+                          <select id="view-selector">
+                            <i class="fa-solid fa-bars"></i>
+                              <option value="table"><i class="fa-solid fa-bars"></i>View Table</option>
+                              <option value="summary">View Graph</option>
+                          </select>
+                      </div>
+                  </div>
+          
+                  <!-- Table Section (toggling this part) -->
+                  <div class="table-wrapper" id="table-section">
+                    <table id="sales-rep-table">
+                      <thead>
+                          <tr>
+                              <th class="">Name</th>
+                              <th class="">Store</th>
+                              <th class="">City</th>
+                              <th class="">Region</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <!-- Content will be dynamically inserted here -->
+                      </tbody>
+                      <tfoot>
+                          <tr>
+                           
+                          </tr>
+                      </tfoot>
+                  </table>
+              
+                      <!-- Second Table (Metrics) -->
+                      <table id="sales-metrics-table">
+                        <thead>
+                            <tr>
+                                <th>Total Opportunities</th>
+                                <th>Chase</th>
+                                <th>Proposal</th>
+                                <th>Contracting</th>
+                                <th>Escalated Opportunity</th>
+                                <th>Won</th>
+                                <th>Lost</th>
+                                <th>Hygiene Score</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot>
+                            <tr id="total">
+                                <td id="total-opportunities"></td>
+                                <td id="total-chase"></td>
+                                <td id="total-proposal"></td>
+                                <td id="total-hygiene"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                  </div>
+                  
+                  <!-- Graph Section (toggling this part) -->
+                  <div class="graph-wrapper" id="graph-section">
+                      <p>Graph goes here (e.g., a bar or line chart)</p>
+                      <!-- You can use a chart library like Chart.js or D3.js to create the actual graph -->
+                  </div>
+              </div>
+          </div>
+          
+          
+            <div class="section5">
+              <div class="filter">
+                <select>
+                    <option>Pivot By</option>
+                </select>
+                <select>
+                    <option>Sales rep</option>
+                </select>
+            </div>
+    <div class="card-container">
+      <div class="card">
+                
+        <div class="card-top">
+        <div class="card-left">
+         <div class="box"><i class="fa-solid fa-fire-flame-curved" style="color: #FF0000; font-size: 23px;"></i></div>
+          <div class="card-subtitle">
+            
+            
+           Stock Clearance Offer
+          <div class="card-header">
+              <span class="badge">High Value</span>
+              <span class="badge" id="cyan">Hygiene: 5/10</span>
+          </div></div></div>
+          <div class="card-right">
+            <div class="name-detail">
+              <img src="./images//blog1.png" style="height: 40px;" alt="Sales Rep">
+             
+            </div>
+         
+            <div class="card-actions">
+              <span>chaitrali kakde</span>
+              <div class="action-img" style="color: rgb(187, 188, 189);">
+              <i class="fa-solid fa-phone"></i>
+              <i class="fa-brands fa-whatsapp"></i>
+              <i class="fa-solid fa-message"></i>
+             
+          </div></div>
+        </div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-details">
+              <div class="card-detail">
+                Status: <strong>Proposal</strong>
+                <div class="status-bar">
+                  <div class="status-step active"></div>
+                  <div class="status-step"></div>
+                  <div class="status-step"></div>
+                  <div class="status-step"></div>
+              </div>
+              </div>
+              <div class="card-detail">
+                Products:<span>5</span> </div>
+              <div class="card-detail">
+                Revenue: <span>$40,00</span></div>
+              <div class="card-detail">
+                Sales Person: <span>$40,00</span></div>
+              <div class="card-detail">
+                Expected Closure Date: <span>$40,00</span></div>
+                <div class="card-detail">
+                  Expected Closure Date: <span>$40,00</span></div>
+          </div>
+       
+          
+      </div>
+      
+  </div>
+            <div class="card">
+                
+              <div class="card-top">
+              <div class="card-left">
+               <div class="box"><i class="fa-solid fa-fire-flame-curved" style="color: #FF0000; font-size: 23px;"></i></div>
+                <div class="card-subtitle">
+                  
+                  
+                 Stock Clearance Offer
+                <div class="card-header">
+                    <span class="badge">High Value</span>
+                    <span class="badge">Hygiene: 5/10</span>
+                </div></div></div>
+                <div class="card-right">
+                  <div class="name-detail">
+                    <img src="./images//blog1.png" style="height: 40px;" alt="Sales Rep">
+                  </div>
+               
+                  <div class="card-actions">
+                    <span>chaitrali kakde</span>
+                    <div class="action-img" style="color: rgb(187, 188, 189);">
+                    <i class="fa-solid fa-phone"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <i class="fa-solid fa-message"></i>
+                    
+                </div></div>
+              </div>
+              </div>
+              <div class="card-bottom">
+                <div class="card-details">
+                    <div class="card-detail">
+                      Status: <strong>Proposal</strong>
+                      <div class="status-bar">
+                        <div class="status-step active"></div>
+                        <div class="status-step"></div>
+                        <div class="status-step"></div>
+                        <div class="status-step"></div>
+                    </div>
+                    </div>
+                    <div class="card-detail">
+                      Products:<span>5</span> </div>
+                    <div class="card-detail">
+                      Revenue: <span>$40,00</span></div>
+                    <div class="card-detail">
+                      Sales Person: <span>$40,00</span></div>
+                    <div class="card-detail">
+                      Expected Closure Date: <span>$40,00</span></div>
+                      <div class="card-detail">
+                        Expected Closure Date: <span>$40,00</span></div>
+                </div>
+             
+                
+            </div>
+            
+        </div>
+        <div class="card">
+                
+          <div class="card-top">
+          <div class="card-left">
+           <div class="box"><i class="fa-solid fa-fire-flame-curved" style="color: #FF0000; font-size: 23px;"></i></div>
+            <div class="card-subtitle">
+              
+              
+             Stock Clearance Offer
+            <div class="card-header">
+                <span class="badge">High Value</span>
+                <span class="badge">Hygiene: 5/10</span>
+            </div></div></div>
+            <div class="card-right">
+              <div class="name-detail">
+                <img src="./images//blog1.png" style="height: 40px;" alt="Sales Rep">
+               
+              </div>
+           
+              <div class="card-actions">
+                <span>chaitrali kakde</span>
+                <div class="action-img" style="color: rgb(187, 188, 189);">
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-solid fa-message"></i>
+               
+            </div></div>
+          </div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-details">
+                <div class="card-detail">
+                  Status: <strong>Proposal</strong>
+                  <div class="status-bar">
+                    <div class="status-step active"></div>
+                    <div class="status-step"></div>
+                    <div class="status-step"></div>
+                    <div class="status-step"></div>
+                </div>
+                </div>
+                <div class="card-detail">
+                  Products:<span>5</span> </div>
+                <div class="card-detail">
+                  Revenue: <span>$40,00</span></div>
+                <div class="card-detail">
+                  Sales Person: <span>$40,00</span></div>
+                <div class="card-detail">
+                  Expected Closure Date: <span>$40,00</span></div>
+                  <div class="card-detail">
+                    Expected Closure Date: <span>$40,00</span></div>
+            </div>
+         
+            
+        </div>
+        
+    </div>
+          
+          </div>
+            </div>
+        </div>
+    </div>
+ </main>
+ <script src="script.js"></script>
+</body>
+</html>
