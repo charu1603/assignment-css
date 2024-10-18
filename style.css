@@ -77,11 +77,13 @@ height: 130vh;
   .sideContent{
     font-size: 14px;
     display: flex;
+    overflow: auto;
     flex-direction: column;
     width: 100%;
     margin-left: 6%;
     height: max-content;
     background-color: #e9e8e8;
+    transition: margin-left 0.3s ease-in-out;
   }
   .navbar {
     display: flex;
@@ -184,7 +186,7 @@ height: 130vh;
   }
   .Focus {
     position: relative;
-    background-color: #7255D6;
+    background-color: #7C69BF;
     color: white;
     padding: 20px;
     border-radius: 16px;
@@ -298,7 +300,7 @@ height: 130vh;
   }
   
   .progress-circle {
-    background: conic-gradient(#6A5ACD 0% 80%, #D3D3D3 80% 100%);
+    background: conic-gradient(#7C69BF 0% 80%, #D3D3D3 80% 100%);
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -675,4 +677,149 @@ border-right: 1px rgb(215, 210, 210) solid;
   float: left;
   height: 10vh;
   width: 14vw;
+}
+
+.graph-wrapper {
+  display: none;
+  /* Hidden initially */
+}
+.funnel{
+  display: flex;
+}
+.funnel-chart {
+  width: 39%;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.funnel-stage {
+  background-color: #6A5ACD;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.stage1 { width: 100%; }
+.stage2 { width: 80%; }
+.stage3 { width: 60%; }
+.stage4 { width: 40%; }
+.stage5 { width: 20%; }
+.stage6 { width: 10%; }
+
+.funnel-label {
+  font-size: 1.2em;
+}
+
+.funnel-value {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.funnel-stage:hover {
+  background-color: #87CEEB;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 8px;
+}
+
+tbody td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.section5{
+  margin-top: 15px;
+}
+.sub-sidebar {
+  width: 250px;
+  background-color: #3B175E;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -300px; /* Hidden by default */
+
+  transition: left 0.3s ease-in-out;
+}
+
+.sub-sidebar.open {
+  left: 60px; /* Slide in when open */
+}
+
+.sub-sidebar-content {
+  color: white;
+}
+
+.sub-sidebar h3 {
+  text-align: center;
+  padding: 15px;
+  margin-top: 0;
+  background-color: #4C2872;
+}
+
+.sub-sidebar ul {
+  padding: 20px;
+  list-style-type: none;
+
+}
+
+.sub-sidebar ul li {
+
+  margin: 40px 0;
+  color: white;
+}
+
+.sub-sidebar ul li.active {
+  background-color: #5D6EFA;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.sub-sidebar ul li a {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+.sub-sidebar ul li a img{
+  padding-right: 4px;
+}
+.sub-sidebar ul li.active a {
+  font-weight: bold;
+}
+
+/* Scrollbar */
+.sub-sidebar {
+  overflow-y: auto;
+}
+
+.sub-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sub-sidebar::-webkit-scrollbar-track {
+  background-color: #4A0E9E;
+}
+
+.sub-sidebar::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 5px;
+}
+.sub-sidebar.open ~ .sideContent {
+  margin-left: 340px; /* Adjust content when sub-sidebar is open */
 }

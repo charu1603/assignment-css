@@ -1,3 +1,7 @@
+function toggleSubSidebar() {
+    const subSidebar = document.getElementById("subSidebar");
+    subSidebar.classList.toggle("open");
+}
 
 const xValues = [100,200,300,400,500,600,700,800,900,1000];
 
@@ -7,11 +11,11 @@ new Chart("myChart", {
     labels: xValues,
     datasets: [{ 
       data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
-      borderColor: "red",
+      borderColor: "#FEAB33",
       fill: false
     }, { 
       data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
-      borderColor: "blue",
+      borderColor: "#7C69BF",
       fill: false
     }]
   },
@@ -158,10 +162,10 @@ var myChart = new Chart(ctx, {
         labels: ["Male", "Female"],
         datasets: [{
             label: '# of Votes',
-            data: [16, 41],
+            data: [41, 16],
             backgroundColor: [
-                '#21A9E1',
-                '#F67FBB'
+                '#7C69BF',
+                '#D3D3D3'
             ],
             borderWidth: 0
         }]
@@ -175,3 +179,51 @@ var myChart = new Chart(ctx, {
         circumference: 1 * Math.PI
     }
 });
+
+const funnelData = [
+    {
+        'Total Opportunities': '$50,000',
+        'Chase': '$30,000',
+        'Proposal': '$20,000',
+        'Contracting': '$10,000',
+        'Escalated Opportunity': '$7,000',
+        'Won': '$5,000'
+    },
+    {
+        'Total Opportunities': '$45,000',
+        'Chase': '$28,000',
+        'Proposal': '$18,000',
+        'Contracting': '$9,000',
+        'Escalated Opportunity': '$6,000',
+        'Won': '$4,000'
+    },
+    {
+        'Total Opportunities': '$60,000',
+        'Chase': '$35,000',
+        'Proposal': '$25,000',
+        'Contracting': '$12,000',
+        'Escalated Opportunity': '$8,000',
+        'Won': '$6,000'
+    }
+];
+
+// Function to populate the table with multiple rows of funnel data
+function populateTable() {
+    const tableBody = document.querySelector('#sales-table tbody');
+    tableBody.innerHTML = ''; // Clear any existing rows
+
+    funnelData.forEach(rowData => {
+        const row = document.createElement('tr');
+        
+        for (const stage in rowData) {
+            const cell = document.createElement('td');
+            cell.textContent = rowData[stage];
+            row.appendChild(cell);
+        }
+
+        tableBody.appendChild(row);
+    });
+}
+
+// Call the function to populate the table when the page loads
+populateTable();

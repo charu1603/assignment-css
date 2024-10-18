@@ -40,12 +40,12 @@
                 </a>
               </li>
               <li>
-                <a href="#">
-                  <i class="fas fa-chart-pie"></i> <!-- Demand Wise icon -->
-                  Demand Wise
+                <a href="javascript:void(0)" onclick="toggleSubSidebar()">
+                    <i class="fas fa-chart-line"></i> <!-- Demand icon -->
+                    Demand
                 </a>
-              </li>
-              <li>
+            </li>
+           <li>
                 <a href="#">
                   <i class="fas fa-headset"></i> <!-- Support icon -->
                   Support
@@ -73,6 +73,20 @@
           </div>
         </div>
     </div>
+    <div class="sub-sidebar" id="subSidebar">
+      <div class="sub-sidebar-content">
+          <h3>Analytics</h3>
+          <ul>
+              <li class="active"><a href="#">
+                <img src="./images//icon.png">
+                Live Insights</a></li>
+              <li><a href="#"> <img src="./images//icon1.png">Program Insights</a></li>
+              <li><a href="#">   <img src="./images//icon.png">Product Ads Insight</a></li>
+              <li><a href="#">   <img src="./images//icon1.png">Display Ads Insight</a></li>
+              <li><a href="#">   <img src="./images//icon.png">Schedule Report</a></li>
+          </ul>
+      </div>
+  </div>
     <div class="sideContent">
         <div class="navbar">
             <div class="left-section">
@@ -146,7 +160,7 @@
                 <span>Completed Goals</span>
               </div>
             </div>
-              <p class="note">*Date filter doesn't apply to this data</p>
+              
             </div>
            
           </div>
@@ -212,7 +226,7 @@
                           <select id="view-selector">
                             <i class="fa-solid fa-bars"></i>
                               <option value="table"><i class="fa-solid fa-bars"></i>View Table</option>
-                              <option value="summary">View Graph</option>
+                              <option value="graph">View Graph</option>
                           </select>
                       </div>
                   </div>
@@ -265,14 +279,57 @@
                   </div>
                   
                   <!-- Graph Section (toggling this part) -->
-                  <div class="graph-wrapper" id="graph-section">
-                      <p>Graph goes here (e.g., a bar or line chart)</p>
-                      <!-- You can use a chart library like Chart.js or D3.js to create the actual graph -->
-                  </div>
-              </div>
+                
+                  <div id="graph-section" class="graph-wrapper">
+                    <div class="funnel">
+                    <div class="funnel-chart">
+                      <div class="funnel-stage stage1">
+                       
+                      </div>
+                      <div class="funnel-stage stage2">
+                     
+                      </div>
+                      <div class="funnel-stage stage3">
+                       
+                      </div>
+                      <div class="funnel-stage stage4">
+                       
+                      </div>
+                      <div class="funnel-stage stage5">
+                        
+                      </div>
+                      <div class="funnel-stage stage6">
+                     
+                      </div>
+                    </div>
+                     <!-- Second Table (Metrics) -->
+                     <table id="sales-table">
+                      <thead>
+                          <tr>
+                              <th>Total Opportunities</th>
+                              <th>Chase</th>
+                              <th>Proposal</th>
+                              <th>Contracting</th>
+                              <th>Escalated Opportunity</th>
+                              <th>Won</th>
+                              
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>$50,000</td>
+                          <td>$30,000</td>
+                          <td>$20,000</td>
+                          <td>$10,000</td>
+                          <td>$7,000</td>
+                          <td>$5,000</td>
+                        </tr>
+                      </tbody>
+                     
+                  </table>
+                </div>
+             </div>
           </div>
-          
-          
             <div class="section5">
               <div class="filter">
                 <select>
