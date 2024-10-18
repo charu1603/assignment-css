@@ -58,7 +58,7 @@ height: 130vh;
   }
   
   .menu ul li a:hover, .footer ul li a:hover {
-    color: #FFD700; /* Gold color on hover */
+    color: #FFD700; 
   }
   
   .menu ul li a .fas, .footer ul li a .fas {
@@ -72,7 +72,7 @@ height: 130vh;
   }
   
   .footer ul li a .fas {
-    font-size: 22px; /* Slightly smaller icon in footer */
+    font-size: 22px;
   }
   .sideContent{
     font-size: 14px;
@@ -372,12 +372,12 @@ margin-right: 12px;
   }
   .tabs .tab:nth-child(1) {
     background-color: #e0d9fb;
-    border: 1px #7C69BF solid ; /* Red-Orange */
+    border: 1px #7C69BF solid ; 
 }
 
 .tabs .tab:nth-child(2) {
     background-color: #f7ebd4;
-    border: 1px #F6BD4B solid; /* Sky Blue */
+    border: 1px #F6BD4B solid;
 }
 
   .section3  {
@@ -459,8 +459,8 @@ align-items: center;
   padding: 2px;
 }
 table {
-  width: 48%; /* Each table takes up 48% of the width to make space for both */
-  min-height: 300px; /* Adjust the height according to your requirement */
+  width: 48%; 
+  min-height: 300px; 
 }
 
 .box{
